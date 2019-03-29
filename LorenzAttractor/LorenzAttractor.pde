@@ -35,7 +35,7 @@ void draw() {
   translate(0, 0, -80);
   scale(5);
   stroke(255);
-  strokeWeight(0.75);
+  strokeWeight(0.6);
   noFill();
   
   float h = 0;
