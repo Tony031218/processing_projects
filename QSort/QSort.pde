@@ -1,3 +1,6 @@
+//import gifAnimation.*;
+//GifMaker gif;
+
 float x, y;
 int r, g, b;
 ArrayList<PVector> colors = new ArrayList<PVector>();
@@ -7,6 +10,9 @@ public static ArrayList<ArrayList<Integer>> arrIntegers = new ArrayList<ArrayLis
 void createNumbers() {
   for (int i = 0; i < numbers.length; ++i) {
     numbers[i] = (int)random(2, 800);
+    //r = (int)random(256);
+    //g = (int)random(256);
+    //b = (int)random(256);
     r = 256; g = 256; b = 256;
     colors.add(new PVector(r, g, b));
   }
@@ -31,11 +37,11 @@ void draw() {
     ArrayList<Integer> arr = arrIntegers.get(index);
     index++;
     for (int j = 0; j < arr.size(); ++j) {
-      x = j * 3.7 + 30;
-      y = 1000 - arr.get(j);
+      x = j * 20 + 50;
+      y = 900 - arr.get(j);
       PVector c = colors.get(j);
       fill(c.x, c.y, c.z);
-      rect(x, y, 3, arr.get(j));
+      rect(x, y, 8, arr.get(j), 5);
     }
     fill(255);
     textSize(20);
@@ -72,3 +78,18 @@ public static void printArr(int[] numbers) {
   }
   arrIntegers.add(arr);
 }
+
+//void setup_() {
+//  gif = new GifMaker(this,"QSort.gif"); 
+//  gif.setRepeat(0);
+//  gif.setDelay(40);
+//} 
+
+//void draw_() {
+//  if(frameCount % 10 == 0) {
+//    gif.addFrame();
+//  }
+//}
+//void mousePressed() {
+//  gif.finish();
+//}
