@@ -1,4 +1,6 @@
 *.tif
 *.gif
 *.png
+*.jpg
+*.mp4
 */frames/
